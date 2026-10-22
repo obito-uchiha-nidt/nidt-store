@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Admin – NIDT STORE</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+  <section id="login" class="center" hidden>
+    <form id="loginForm" class="box" autocomplete="off">
+      <img src="logo.png" alt="NIDT STORE" class="mini-logo">
+      <h1>Admin sign in</h1>
+      <label class="field">
+        <span>GitHub access token</span>
+        <input id="tok" type="password" autocomplete="off" required>
+      </label>
+      <p class="hint">Only the owner's token works. It stays in this browser tab and is never saved.</p>
+      <p id="loginErr" class="msg err" role="alert" hidden></p>
+      <button class="btn btn-primary" type="submit">Sign in</button>
+    </form>
+  </section>
+
+  <section id="panel" hidden>
+    <header class="topbar">
+      <img src="logo.png" alt="NIDT STORE" class="top-logo">
+      <div class="top-actions">
+        <a class="btn" href="index.html" target="_blank" rel="noopener">View store</a>
+        <button id="logout" class="btn" type="button">Sign out</button>
+      </div>
+    </header>
+    <main class="wrap panel-grid">
+      <form id="uploadForm" class="box">
+        <h2>Upload APK</h2>
+        <label class="field"><span>App name</span><input id="name" maxlength="60" required></label>
+        <label class="field"><span>Version</span><input id="version" maxlength="20" placeholder="1.0.0" required></label>
+        <label class="field"><span>Description</span><textarea id="desc" maxlength="300" rows="3"></textarea></label>
+        <label class="field"><span>APK file</span><input id="apk" type="file" accept=".apk,application/vnd.android.package-archive" required></label>
+        <div id="prog" class="prog" hidden><div id="bar"></div></div>
+        <p id="upMsg" class="msg" role="status" hidden></p>
+        <button id="upBtn" class="btn btn-primary" type="submit">Upload</button>
+      </form>
+      <div>
+        <h2 class="list-title">Uploaded apps <span id="count" class="ver"></span></h2>
+        <div id="list" class="rows"></div>
+        <p id="none" class="empty" hidden>No apps uploaded yet.</p>
+      </div>
+    </main>
+  </section>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

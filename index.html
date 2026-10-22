@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIDT STORE – Android apps, direct download</title>
+  <meta name="description" content="NIDT STORE: download Android APKs directly.">
+  <meta name="theme-color" content="#03060d">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#apps">Skip to apps</a>
+
+  <header class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <img class="hero-logo" src="logo.png" alt="NIDT STORE" width="1540" height="436">
+    <h1>Android apps, one tap away.</h1>
+    <p class="lead">Download APK files straight from the source. No account, no waiting.</p>
+    <a class="btn btn-primary" href="#apps">Browse apps</a>
+  </header>
+
+  <main id="apps" class="wrap">
+    <div class="bar">
+      <h2>Apps</h2>
+      <label class="search">
+        <span class="sr">Search apps</span>
+        <input id="q" type="search" placeholder="Search apps" autocomplete="off">
+      </label>
+    </div>
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <p id="empty" class="empty" hidden></p>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="yr"></span> NIDT STORE</p>
+    <p class="note">Only install apps from sources you trust. Android will ask you to allow installs from your browser the first time.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
